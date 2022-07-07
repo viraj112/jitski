@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_meet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/cardview_bg"
+        android:layout_margin="10dp"
+        app:cardCornerRadius="10dp"
+        >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp"
+       >
+
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/meet"
+                android:padding="5dp"
+                android:gravity="start|center_horizontal"/>
+
+        <LinearLayout
+            android:id="@+id/linear_info"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_margin="10dp">
+            <TextView
+                android:id="@+id/tv_meetName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2022 AGM Meeting"
+                android:layout_gravity="start"
+                android:layout_marginLeft="20dp"
+                />
+
+        <TextView
+            android:id="@+id/tv_meetDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2022 AGM Meeting"
+            android:layout_gravity="start"
+            android:layout_marginLeft="20dp"/>
+
+        </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@+id/linear_info"
+        >
+        <TextView
+
+            android:id="@+id/tv_meetStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Started"
+            android:singleLine="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            />
+    </RelativeLayout>
+    </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

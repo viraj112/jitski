@@ -3,7 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/user/AndroidStudioProjects/JitsiMeet/app/src/main/res/drawable-v24/bg_btn_join.xml" value="0.1265" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/JitsiMeet/app/src/main/res/layout/activity_calender.xml" value="0.1875" />
         <entry key="..\:/Users/user/AndroidStudioProjects/JitsiMeet/app/src/main/res/layout/activity_main.xml" value="0.14814814814814814" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/JitsiMeet/app/src/main/res/layout/alert_dialog.xml" value="0.1875" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/JitsiMeet/app/src/main/res/layout/recyler_row.xml" value="0.1875" />
       </map>
     </option>
   </component>

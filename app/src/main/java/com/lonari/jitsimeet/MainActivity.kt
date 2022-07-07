@@ -46,6 +46,21 @@ class MainActivity : AppCompatActivity() {
         JitsiMeet.setDefaultConferenceOptions(defaultOptions)
 
         registerForBroadcastMessages()
+
+        // Build options object for joining the conference. The SDK will merge the default
+        // one we set earlier and this one when joining.
+        val options = JitsiMeetConferenceOptions.Builder()
+            .setRoom("AMG Meet")
+
+            .setFeatureFlag("invite.enabled",false)
+            // Settings for audio and video
+            //.setAudioMuted(true)
+            //.setVideoMuted(true)
+            .build()
+        // Launch the new activity with the given options. The launch() method takes care
+        // of creating the required Intent and passing the options.
+        JitsiMeetActivity.launch(this, options)
+
     }
 
     override fun onDestroy() {
@@ -54,23 +69,20 @@ class MainActivity : AppCompatActivity() {
     }
 
 
-    fun onButtonClick(v: View?) {
-        val editText = findViewById<EditText>(R.id.conferenceName)
-        val text = editText.text.toString()
-        if (text.isNotEmpty()) {
-            // Build options object for joining the conference. The SDK will merge the default
-            // one we set earlier and this one when joining.
-            val options = JitsiMeetConferenceOptions.Builder()
-                .setRoom(text)
-                // Settings for audio and video
-                //.setAudioMuted(true)
-                //.setVideoMuted(true)
-                .build()
-            // Launch the new activity with the given options. The launch() method takes care
-            // of creating the required Intent and passing the options.
-            JitsiMeetActivity.launch(this, options)
-        }
-    }
+//    fun onButtonClick(v: View?) {
+//            // Build options object for joining the conference. The SDK will merge the default
+//            // one we set earlier and this one when joining.
+//            val options = JitsiMeetConferenceOptions.Builder()
+//                .setRoom("AMG Meet")
+//                // Settings for audio and video
+//                //.setAudioMuted(true)
+//                //.setVideoMuted(true)
+//                .build()
+//            // Launch the new activity with the given options. The launch() method takes care
+//            // of creating the required Intent and passing the options.
+//            JitsiMeetActivity.launch(this, options)
+//
+//    }
 
 
     private fun registerForBroadcastMessages() {
